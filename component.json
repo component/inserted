@@ -1,0 +1,14 @@
+{
+  "name": "inserted",
+  "repo": "component/inserted",
+  "description": "invoke a callback when a DOM element is inserted",
+  "version": "0.0.1",
+  "keywords": ["dom", "event"],
+  "dependencies": {
+    "component/within-document": "*"
+  },
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}

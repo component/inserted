@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script src="build/build.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+
+    <script>
+      var div = document.createElement('div');
+      div.innerHTML = '<p><em>woot</em></p>';
+      var em = div.children[0].children[0]
+
+      var inserted = require('inserted');
+
+      inserted(em, function(){
+        console.log('inserted');
+      });
+
+      setTimeout(function(){
+        document.body.appendChild(div);
+      }, 1000);
+
+    </script>
+  </body>
+</html>
