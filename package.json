@@ -4,11 +4,12 @@
   "description": "invoke a callback when a DOM element is inserted",
   "version": "0.0.1",
   "keywords": ["dom", "event"],
-  "dependencies": {
-    "within-document": "*"
-  },
+  "dependencies": {},
   "development": {},
   "component": {
+    "styles": [
+      "inserted.css"
+    ],
     "scripts": {
       "inserted/index.js": "index.js"
     }

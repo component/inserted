@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="build/build.css">
+  </head>
   <body>
     <script src="build/build.js"></script>
-    <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-
     <script>
       var div = document.createElement('div');
       div.innerHTML = '<p><em>woot</em></p>';
-      var em = div.children[0].children[0]
+      div.className = 'inserted';
 
       var inserted = require('inserted');
 
-      inserted(em, function(){
+      inserted('div', function(){
         console.log('inserted');
       });
 
