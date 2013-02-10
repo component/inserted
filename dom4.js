@@ -51,13 +51,13 @@ function onchanges(changes){
         // or that it's now part of the document
         if (withinDoc(el)) {
           watched.splice(i2 - found++, 1)[0][1]();
-
-          // abort if nothing else left to watch
-          if (!watched.length) {
-            observer.disconnect();
-            return;
-          }
         }
+
+        // abort if nothing else left to watch
+        if (!watched.length) observer.disconnect();
+
+        // we only need to loop through watched els once
+        break;
       }
     }
   }
