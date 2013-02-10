@@ -7,10 +7,11 @@
     "dom",
     "event"
   ],
-  "dependencies": {
-    "component/within-document": "*"
-  },
+  "dependencies": {},
   "development": {},
+  "styles": [
+    "inserted.css"
+  ],
   "scripts": [
     "index.js"
   ],

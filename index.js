@@ -1,10 +1,3 @@
-
-/**
- * Module dependencies.
- */
-
-var withinDocument = require('within-document');
-
 /**
  * Expose `inserted`.
  */
@@ -12,35 +5,50 @@ var withinDocument = require('within-document');
 exports = module.exports = inserted;
 
 /**
- * Default interval.
+ * Mapping of insert callbacks
+ * @type {Object}
  */
 
-exports.interval = 200;
+exports.insertHandlers = {};
 
 /**
- * Watch for removal and invoke `fn(el)`.
+ * Watch for insertion and invoke `fn(el)`.
  *
- * @param {Element} el
+ * @param {String} sel
  * @param {Function} fn
  * @api public
  */
 
-function inserted(el, fn){
-  interval(el, fn);
+function inserted(sel, fn){
+  exports.insertHandlers[sel] = fn;
 }
 
 /**
- * Watch for removal with an interval.
- *
- * @param {Element} el
- * @param {Function} fn
- * @api private
+ * Global insert event listener
+ * @param  {Object} event
  */
 
-function interval(el, fn) {
-  var id = setInterval(function(){
-    if (!withinDocument(el)) return;
-    clearInterval(id);
-    fn(el);
-  }, exports.interval);
+function insertListener(event){
+  if (event.animationName == 'nodeInserted') {
+    var el = event.target;
+    var matchesSelector = function(sel) {
+      if (el.webkitMatchesSelector) {
+        return el.webkitMatchesSelector(sel);
+      } else if (el.mozMatchesSelector) {
+        return el.mozMatchesSelector(sel);
+      } else {
+        return false;
+      }
+    }
+    for (var sel in exports.insertHandlers) {
+      if (matchesSelector(sel)) {
+        exports.insertHandlers[sel](el);
+        // el.classList.remove('inserted');
+      }
+    }
+  }
 }
+
+document.addEventListener('animationstart', insertListener, false); // standard + firefox
+// document.addEventListener('MSAnimationStart', insertListener, false); // IE
+document.addEventListener('webkitAnimationStart', insertListener, false); // Chrome + Safari
