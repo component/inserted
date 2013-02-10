@@ -55,10 +55,10 @@ function onchanges(changes){
 
         // abort if nothing else left to watch
         if (!watched.length) observer.disconnect();
-
-        // we only need to loop through watched els once
-        break;
       }
+
+      // we only need to loop through watched els once
+      break;
     }
   }
 }
