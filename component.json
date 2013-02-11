@@ -3,16 +3,16 @@
   "repo": "component/inserted",
   "description": "invoke a callback when a DOM element is inserted",
   "version": "0.0.1",
-  "keywords": [
-    "dom",
-    "event"
-  ],
+  "keywords": ["dom", "event", "insertion"],
   "dependencies": {
-    "component/within-document": "*"
+    "component/within-document": "*",
+    "component/mutation-observer": "*"
   },
   "development": {},
   "scripts": [
-    "index.js"
+    "index.js",
+    "fallback.js",
+    "dom4.js"
   ],
   "license": "MIT"
 }
