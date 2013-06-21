@@ -12,4 +12,6 @@ var Observer = require('mutation-observer');
 
 module.exports = Observer
   ? require('./dom4')
-  : require('./fallback');
+  : document.addEventListener
+    ? require('./dom3')
+    : require('./fallback');
