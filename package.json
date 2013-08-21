@@ -3,7 +3,10 @@
   "repo": "component/inserted",
   "description": "invoke a callback when a DOM element is inserted",
   "version": "0.0.2",
-  "keywords": ["dom", "event"],
+  "keywords": [
+    "dom",
+    "event"
+  ],
   "dependencies": {
     "within-document": "*",
     "mutation-observer": "*"
@@ -15,5 +18,9 @@
       "inserted/fallback.js": "fallback.js",
       "inserted/dom4.js": "dom4.js"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/component/inserted.git"
   }
 }
