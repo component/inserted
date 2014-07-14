@@ -9,6 +9,7 @@
     "component/mutation-observer": "*"
   },
   "development": {},
+  "main": "index.js",
   "scripts": [
     "index.js",
     "fallback.js",

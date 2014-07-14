@@ -1,12 +1,14 @@
 {
-  "name": "inserted-component",
-  "repo": "component/inserted",
+  "name": "inserted",
   "description": "invoke a callback when a DOM element is inserted",
   "version": "0.0.2",
   "keywords": [
+    "browser",
     "dom",
-    "event"
+    "event",
+    "insertion"
   ],
+  "main": "index.js",
   "dependencies": {
     "within-document": "*",
     "mutation-observer": "*"
@@ -16,6 +18,7 @@
     "scripts": {
       "inserted/index.js": "index.js",
       "inserted/fallback.js": "fallback.js",
+      "inserted/dom3.js": "dom3.js",
       "inserted/dom4.js": "dom4.js"
     }
   },
