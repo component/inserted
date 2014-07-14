@@ -1,7 +1,7 @@
 {
   "name": "inserted",
   "description": "invoke a callback when a DOM element is inserted",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "browser",
     "dom",

@@ -2,8 +2,12 @@
   "name": "inserted",
   "repo": "component/inserted",
   "description": "invoke a callback when a DOM element is inserted",
-  "version": "0.0.2",
-  "keywords": ["dom", "event", "insertion"],
+  "version": "0.0.3",
+  "keywords": [
+    "dom",
+    "event",
+    "insertion"
+  ],
   "dependencies": {
     "component/within-document": "*",
     "component/mutation-observer": "*"
