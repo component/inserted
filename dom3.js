@@ -12,7 +12,7 @@ module.exports = inserted;
 function inserted(el, fn) {
   function cb(mutationEvent) {
     var target = mutationEvent.target
-      , children = [].slice.call(target.getElementsByTagName('*'))
+      , children = target.getElementsByTagName ? [].slice.call(target.getElementsByTagName('*')) : [];
 
     if (el === target || ~children.indexOf(el)) {
       fn(el);
