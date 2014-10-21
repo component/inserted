@@ -2,7 +2,7 @@
   "name": "inserted",
   "repo": "component/inserted",
   "description": "invoke a callback when a DOM element is inserted",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "dom",
     "event",
