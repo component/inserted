@@ -9,7 +9,7 @@
     "insertion"
   ],
   "dependencies": {
-    "component/within-document": "*",
+    "component/within-document": "0.0.3",
     "component/mutation-observer": "1.0.1"
   },
   "development": {},
