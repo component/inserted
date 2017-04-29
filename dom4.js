@@ -3,8 +3,9 @@
  * Module dependencies.
  */
 
-var withinDoc = require('within-document')
-  , Observer = require('mutation-observer');
+var withinDoc = require('within-document');
+
+var Observer = require('mutation-observer');
 
 /**
  * Expose `inserted`.

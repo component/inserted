@@ -11,8 +11,8 @@ module.exports = inserted;
 
 function inserted(el, fn) {
   function cb(mutationEvent) {
-    var target = mutationEvent.target
-      , children = target.getElementsByTagName ? [].slice.call(target.getElementsByTagName('*')) : [];
+    var target = mutationEvent.target;
+    var children = target.getElementsByTagName ? [].slice.call(target.getElementsByTagName('*')) : [];
 
     if (el === target || ~children.indexOf(el)) {
       fn(el);
