@@ -38,7 +38,7 @@ function inserted(el, fn){
  */
 
 function interval(el, fn) {
-  var id = setInterval(function(){
+  var id = setInterval(() => {
     if (!withinDocument(el)) return;
     clearInterval(id);
     fn(el);
